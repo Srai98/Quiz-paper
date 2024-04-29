@@ -8,7 +8,13 @@ function showCategories() {
     document.getElementById('category-section').style.display = 'block';
 }
 
-
+// Function to start the quiz with selected category and time limit
+function startQuiz(category, timeLimit) {
+    // Store the selected category and time limit in sessionStorage
+    sessionStorage.setItem('categories', category);
+    sessionStorage.setItem('timeLimit', timeLimit);
+    window.location.href = 'quiz.html';     // Redirect to the quiz page
+}
 
 // Define categories and questions
 const categories = {
@@ -76,10 +82,3 @@ const categories = {
     ]
 };
 
-// Quiz variables
-let currentCategory;
-let currentQuestionIndex = 0;
-let correctAnswers = 0;
-let wrongAnswers = 0;
-let startTime;
-let endTime;

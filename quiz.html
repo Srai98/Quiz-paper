@@ -9,14 +9,13 @@
 <body>
     <div class="quiz-container">
         <div class="header">
-            <div id="timer">Timer: 00:00</div>
-            <div id="score">Score: 0</div>
+            <div id="timer">Timer: <span id="time-left"></span></div>
+            <div id="score">Score: <span id="current-score">0</span></div>
         </div>
         <div id="question"></div>
         <div id="options"></div>
         <button onclick="nextQuestion()">Next Question</button>
     </div>
-    <!-- link for js file where logic are giving how will this page work -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
